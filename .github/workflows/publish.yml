@@ -18,7 +18,8 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true # This will cache dependencies
-
+      - name: Install bundler
+        run: gem install bundler
       - name: Update Bundler
         run: |
           gem update --system
@@ -26,8 +27,7 @@ jobs:
       # - name: Remove existing Gemfile.lock
       #   run: rm -f Gemfile.lock
       
-      - name: Install bundler
-        run: gem install bundler
+    
       
       # - name: Disable frozen mode for bundler
       #   run: bundle config set frozen false
