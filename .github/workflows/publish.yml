@@ -23,10 +23,11 @@ jobs:
         run: |
           gem update --system
           bundle update --bundler
-
+      - name: Remove existing Gemfile.lock
+        run: rm -f Gemfile.lock
+        
       - name: Install dependencies
         run: |
-          rm -f Gemfile.lock # Remove existing lockfile
           bundle install
 
       - name: Build site
