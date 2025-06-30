@@ -29,8 +29,8 @@ jobs:
       - name: Install bundler
         run: gem install bundler
       
-      - name: Disable frozen mode for bundler
-        run: bundle config set frozen false
+      # - name: Disable frozen mode for bundler
+      #   run: bundle config set frozen false
         
       - name: Install dependencies
         run: |
